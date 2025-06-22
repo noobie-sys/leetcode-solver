@@ -42,19 +42,19 @@ const BotCard = ({
     switch (cornerPosition) {
       case "top-right":
         x = viewportWidth - buttonSize - margin;
-        y = margin;
+        y = margin - 10;
         break;
       case "bottom-right":
         x = viewportWidth - buttonSize - margin;
-        y = viewportHeight - buttonSize - margin;
+        y = viewportHeight - buttonSize - margin + 31;
         break;
       case "top-left":
         x = margin;
-        y = margin;
+        y = margin - 10;
         break;
       case "bottom-left":
         x = margin;
-        y = viewportHeight - buttonSize - margin;
+        y = viewportHeight - buttonSize - margin + 31;
         break;
     }
 
