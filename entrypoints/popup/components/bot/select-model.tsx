@@ -7,14 +7,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import useModel from "../../hooks/use-model";
 
 export function SelectModel() {
+  const { selectedModel, setSelectedModel } = useModel();
+
   return (
-    <Select>
-      <SelectTrigger className="w-full border-none bg-transparent text-sm truncate">
+    <Select value={selectedModel} onValueChange={setSelectedModel}>
+      <SelectTrigger className="w-full border-none  text-sm truncate">
         <SelectValue placeholder="Select a model" />
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent className="bg-[#192126] border " >
         <SelectGroup>
           <SelectItem value="gpt-4o">GPT-4o</SelectItem>
           <SelectItem

@@ -1,8 +1,9 @@
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
 import "./popup/style.css";
-import BotButton from "./popup/components/bot-button";
+import BotButton from "./popup/components/bot";
 import DraggebleUi from "./popup/components/draggable-ui";
+import { ThemeProvider } from "./popup/components/theme-provider";
 
 export default defineContentScript({
   matches: ["*://leetcode.com/problems/*"],
@@ -13,7 +14,9 @@ export default defineContentScript({
 
     createRoot(root).render(
       <StrictMode>
-        <DraggebleUi />
+        <ThemeProvider>
+          <DraggebleUi />
+        </ThemeProvider>
       </StrictMode>
     );
   },

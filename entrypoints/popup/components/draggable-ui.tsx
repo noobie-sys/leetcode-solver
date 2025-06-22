@@ -1,19 +1,12 @@
-import React, { useRef } from "react";
-import * as motion from "motion/react-client";
-import BotButton from "./bot-button";
+import React from "react";
+import BotButton from "./bot";
 
-const DraggebleUi = () => {
-  const constraintsRef = useRef<HTMLDivElement>(null);
+const DraggableUi = () => {
   return (
-    <motion.div className=" flex ">
-      <motion.div
-        ref={constraintsRef}
-        className="h-screen w-screen bg-red-500 flex"
-      >
-        <BotButton constraintsRef={constraintsRef} />
-      </motion.div>
-    </motion.div>
+    <div className="w-full h-full">
+      <BotButton />
+    </div>
   );
 };
 
-export default DraggebleUi;
+export default DraggableUi;
