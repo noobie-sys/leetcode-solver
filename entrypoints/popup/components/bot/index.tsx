@@ -114,7 +114,7 @@ const BotButton = () => {
             className="p-4 !bg-[#09131A] !hover:bg-[#09131A] rounded-full border-none w-12 h-12 shadow-lg"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <BotIcon className="w-8 h-8 text-[#dedede] pointer-events-none" />
+            <BotIcon className="w-8 h-8 text-[#cbcaca] pointer-events-none" />
           </Button>
         </motion.div>
       </motion.div>
